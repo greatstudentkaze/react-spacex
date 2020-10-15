@@ -32,7 +32,7 @@ class App extends React.Component {
       .then(rocketFeatures => this.setState({ rocketFeatures }));
   }
 
-  changeRocket = (rocket) => {
+  changeRocket = rocket => {
     this.setState({ rocket }, this.updateRocket);
   }
 
@@ -41,7 +41,7 @@ class App extends React.Component {
       <React.Fragment>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
         <Main rocket={this.state.rocket} />
-        <Features  />
+        {this.state.rocketFeatures && <Features {...this.state.rocketFeatures} />}
         <Footer />
       </React.Fragment>
     );
