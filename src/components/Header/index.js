@@ -25,7 +25,7 @@ const Header = ({ rockets, changeRocket }) => (
           <NavLink exact to="/" className="item-link" activeClassName="active">Home</NavLink>
         </li>
         <li className="item">
-          <NavLink to="calendar" className="item-link" activeClassName="active">Calendar</NavLink>
+          <NavLink to="/calendar" className="item-link" activeClassName="active">Calendar</NavLink>
         </li>
       </ul>
     </nav>
