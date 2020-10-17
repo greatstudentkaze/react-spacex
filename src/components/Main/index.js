@@ -9,9 +9,9 @@ const video = {
   'other': 'space.mp4'
 };
 
-const Main = ({ rocket }) => (
+const Main = ({ rocket, name }) => (
   <section className="main">
-    <h1 className="title">{rocket ?? 'SpaceX Calendar'}</h1>
+    <h1 className="title">{name || rocket}</h1>
     {rocket && <div className="video-container">
       <video src={`./video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}`}
              className="video" autoPlay loop muted/>
