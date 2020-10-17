@@ -11,7 +11,7 @@ const Calendar = () => {
 
   return (
     <>
-      <Main/>
+      <Main name="SpaceX Calendar"/>
       <section className="calendar">
         <div className="container">
           <ul className="calendar-list">
