@@ -8,10 +8,12 @@ const useLaunches = () => {
 
   useEffect(() => {
     fetchData.getLaunches()
-      .then(launches => setData(launches));
+      .then(launches => setData(() => [...launches]));
   }, []);
 
-  return { data };
+  const getLaunch = id => data && data.find(launch => launch.id === id);
+
+  return { data, getLaunch };
 };
 
 export default useLaunches;
